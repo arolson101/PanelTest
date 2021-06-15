@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="PanelTest.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PanelTest"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*" />
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
+
+		<Grid Grid.Row="0" Grid.Column="0">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="Auto"/>
+			</Grid.RowDefinitions>
+			<Button Grid.Row="0" VerticalAlignment="Stretch" local:YogaPanel.YogaFlex="1">button 1</Button>
+			<Button Grid.Row="1" VerticalAlignment="Stretch" Click="Button_Click" Height="{x:Bind ChildHeight,Mode=OneWay}">Add 10 to this button's height</Button>
+		</Grid>
+
+		<local:YogaPanel Grid.Row="0" Grid.Column="1" x:Name="YogaPanel">
+			<Button VerticalAlignment="Stretch" local:YogaPanel.YogaFlex="1">button 1</Button>
+			<Button VerticalAlignment="Stretch" Click="Button_Click" Height="{x:Bind ChildHeight,Mode=OneWay}">Add 10 to this button's height</Button>
+		</local:YogaPanel>
+
+		<CheckBox Grid.Row="1" IsChecked="{x:Bind CallInvalidateMeasure, Mode=TwoWay}">Call Invalidate Measure</CheckBox>
+
+	</Grid>
+</Page>
