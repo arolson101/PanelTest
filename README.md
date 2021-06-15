@@ -1,4 +1,4 @@
-=== PanelTest ===
+# PanelTest
 
 An example project for [https://stackoverflow.com/questions/67626789/how-does-a-stackpanel-know-when-to-re-layout](this) stackoverflow question.
 
@@ -12,6 +12,6 @@ Without doing anything special, the Grid on the left resizes its contents automa
 
 If I manually call InvalidateMeasure after changing the size, then things work correctly:
 
-<a href="screenshots/noinvalidate.png"><img src="screenshots/noinvalidate.png" alt="InvalidateMeasure is called" width="600"/></a>
+<a href="screenshots/withinvalidate.png"><img src="screenshots/withinvalidate.png" alt="InvalidateMeasure is called" width="600"/></a>
 
 How does the Grid invalidate its measure/layout?
