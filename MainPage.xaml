@@ -25,12 +25,12 @@
 				<RowDefinition Height="Auto"/>
 			</Grid.RowDefinitions>
 			<Button Grid.Row="0" VerticalAlignment="Stretch" local:YogaPanel.YogaFlex="1">button 1</Button>
-			<Button Grid.Row="1" VerticalAlignment="Stretch" Click="Button_Click" Height="{x:Bind ChildHeight,Mode=OneWay}">Add 10 to this button's height</Button>
+			<Button Grid.Row="1" VerticalAlignment="Stretch" Click="Button_Click" Height="{x:Bind ChildHeight,Mode=OneWay}">Add 10 to these buttons' height</Button>
 		</Grid>
 
 		<local:YogaPanel Grid.Row="0" Grid.Column="1" x:Name="YogaPanel">
 			<Button VerticalAlignment="Stretch" local:YogaPanel.YogaFlex="1">button 1</Button>
-			<Button VerticalAlignment="Stretch" Click="Button_Click" Height="{x:Bind ChildHeight,Mode=OneWay}">Add 10 to this button's height</Button>
+			<Button VerticalAlignment="Stretch" Click="Button_Click" Height="{x:Bind ChildHeight,Mode=OneWay}">Add 10 to these buttons' height</Button>
 		</local:YogaPanel>
 
 		<CheckBox Grid.Row="1" IsChecked="{x:Bind CallInvalidateMeasure, Mode=TwoWay}">Call Invalidate Measure</CheckBox>
